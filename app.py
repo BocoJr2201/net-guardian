@@ -2,6 +2,7 @@ import socket
 import subprocess
 import platform
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -68,7 +69,7 @@ def gerar_recomendacao(classificacao):
         return "Revisar regras de firewall, desativar serviços desnecessários e aplicar atualizações de segurança."
 
 def gerar_relatorio(host, conectado, portas_abertas, classificacao, recomendacao):
-    data_hora = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+    data_hora = datetime.now(ZoneInfo("America/Manaus")).strftime("%d/%m/%Y %H:%M:%S")
     with open(ARQUIVO_RELATORIO, "a", encoding="utf-8") as arquivo:
         arquivo.write("\n" + "=" * 60 + "\n")
         arquivo.write("RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN\n")
@@ -147,7 +148,7 @@ def analisar_ip_suspeito(ip, tentativas, portas_distintas, falhas_login, periodo
         "nivel": nivel,
         "evidencias": evidencias,
         "recomendacao": recomendacao,
-        "data_hora": datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+        "data_hora": datetime.now(ZoneInfo("America/Manaus")).strftime("%d/%m/%Y %H:%M:%S")
     }
 
 def gerar_relatorio_ip(resultado):
@@ -196,7 +197,7 @@ def index():
                     "portas_abertas": portas_abertas,
                     "classificacao": classificacao,
                     "recomendacao": recomendacao,
-                    "data_hora": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
+                    "data_hora": datetime.now(ZoneInfo("America/Manaus")).strftime("%d/%m/%Y %H:%M:%S"),
                     "total_portas": total_portas,
                     "abertas": abertas,
                     "fechadas": fechadas
