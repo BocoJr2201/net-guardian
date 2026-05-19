@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Net Guardian | Dashboard</title>
+    <style>
+        :root {
+            --bg: #07111f;
+            --panel: rgba(15, 23, 42, 0.9);
+            --panel-2: rgba(30, 41, 59, 0.85);
+            --border: rgba(56, 189, 248, 0.22);
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --primary: #38bdf8;
+            --green: #22c55e;
+            --yellow: #facc15;
+            --red: #ef4444;
+            --shadow: 0 24px 80px rgba(0, 0, 0, .45);
+        }
+
+        * { box-sizing: border-box; font-family: "Segoe UI", Arial, sans-serif; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(56, 189, 248, .22), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(34, 197, 94, .12), transparent 35%),
+                linear-gradient(135deg, #020617, var(--bg));
+        }
+
+        .layout { display: grid; grid-template-columns: 280px 1fr; min-height: 100vh; }
+
+        aside {
+            padding: 28px 22px;
+            background: rgba(2, 6, 23, .78);
+            border-right: 1px solid var(--border);
+        }
+
+        .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 34px; }
+
+        .logo {
+            width: 48px; height: 48px; border-radius: 16px;
+            display: grid; place-items: center;
+            background: linear-gradient(135deg, var(--primary), #22c55e);
+            color: #020617; font-size: 25px; font-weight: 900;
+            box-shadow: 0 0 35px rgba(56, 189, 248, .35);
+        }
+
+        .brand h1 { margin: 0; font-size: 22px; }
+        .brand span { display: block; color: var(--muted); font-size: 12px; margin-top: 3px; }
+
+        .nav-card {
+            padding: 18px; border-radius: 20px;
+            background: var(--panel-2); border: 1px solid var(--border);
+        }
+
+        .nav-card p { margin: 0 0 14px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+
+        .tag {
+            display: inline-block; padding: 7px 10px; border-radius: 999px;
+            background: rgba(56, 189, 248, .12);
+            border: 1px solid rgba(56, 189, 248, .25);
+            color: #bae6fd; font-size: 12px; margin: 4px 4px 0 0;
+        }
+
+        main { padding: 34px; }
+
+        .hero { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+        .hero h2 { margin: 0; font-size: 34px; }
+        .hero p { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
+
+        .status-online {
+            padding: 11px 14px; border-radius: 999px;
+            background: rgba(34, 197, 94, .13);
+            border: 1px solid rgba(34, 197, 94, .35);
+            color: #bbf7d0; font-weight: 700; white-space: nowrap;
+        }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: start; }
+
+        .card {
+            background: var(--panel); border: 1px solid var(--border);
+            border-radius: 26px; padding: 26px; box-shadow: var(--shadow);
+        }
+
+        .card h3 { margin: 0 0 16px; font-size: 21px; }
+
+        label { display: block; margin-bottom: 8px; color: #cbd5e1; font-weight: 700; }
+
+        input {
+            width: 100%; padding: 14px 16px; margin-bottom: 12px;
+            border: 1px solid rgba(148, 163, 184, .22);
+            border-radius: 16px; background: rgba(2, 6, 23, .65);
+            color: var(--text); font-size: 15px; outline: none;
+        }
+
+        input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(56, 189, 248, .12); }
+
+        button {
+            width: 100%; border: none; border-radius: 16px; padding: 15px 18px;
+            background: linear-gradient(135deg, var(--primary), #22c55e);
+            color: #020617; font-weight: 900; font-size: 15px; cursor: pointer;
+            box-shadow: 0 15px 35px rgba(56, 189, 248, .18);
+        }
+
+        button:hover { transform: translateY(-1px); filter: brightness(1.05); }
+
+        .info-list { display: grid; gap: 12px; margin-top: 18px; }
+
+        .info-item {
+            padding: 13px; border-radius: 16px; background: rgba(15, 23, 42, .75);
+            border: 1px solid rgba(148, 163, 184, .14);
+            color: #cbd5e1; font-size: 14px; line-height: 1.45;
+        }
+
+        .metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 22px; }
+
+        .metric {
+            padding: 18px; border-radius: 22px;
+            background: rgba(15, 23, 42, .78);
+            border: 1px solid rgba(148, 163, 184, .15);
+        }
+
+        .metric small { display: block; color: var(--muted); margin-bottom: 6px; }
+        .metric strong { font-size: 28px; color: white; }
+
+        .badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 9px 12px; border-radius: 999px;
+            font-weight: 900; font-size: 13px;
+        }
+
+        .ativo, .baixo {
+            background: rgba(34, 197, 94, .14);
+            border: 1px solid rgba(34, 197, 94, .35);
+            color: #bbf7d0;
+        }
+
+        .inativo, .alto {
+            background: rgba(239, 68, 68, .14);
+            border: 1px solid rgba(239, 68, 68, .35);
+            color: #fecaca;
+        }
+
+        .medio {
+            background: rgba(250, 204, 21, .14);
+            border: 1px solid rgba(250, 204, 21, .35);
+            color: #fef08a;
+        }
+
+        table { width: 100%; border-collapse: collapse; border-radius: 18px; margin-top: 14px; overflow: hidden; }
+
+        th, td {
+            padding: 14px; text-align: left;
+            border-bottom: 1px solid rgba(148, 163, 184, .12);
+            background: rgba(2, 6, 23, .35);
+        }
+
+        th { color: #7dd3fc; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
+
+        .empty, .recommendation {
+            margin-top: 16px; padding: 18px; border-radius: 18px;
+            background: rgba(56, 189, 248, .10);
+            border: 1px solid rgba(56, 189, 248, .25);
+            color: #dbeafe; line-height: 1.5;
+        }
+
+        footer { margin-top: 28px; color: var(--muted); text-align: center; font-size: 13px; }
+
+        @media (max-width: 900px) {
+            .layout { grid-template-columns: 1fr; }
+            aside { border-right: none; border-bottom: 1px solid var(--border); }
+            main { padding: 22px; }
+            .grid, .metric-grid { grid-template-columns: 1fr; }
+            .hero { flex-direction: column; align-items: stretch; }
+        }
+    </style>
+</head>
+<body>
+<div class="layout">
+    <aside>
+        <div class="brand">
+            <div class="logo">🛡</div>
+            <div>
+                <h1>Net Guardian</h1>
+                <span>Cybersecurity Automation</span>
+            </div>
+        </div>
+
+        <div class="nav-card">
+            <p>Dashboard acadêmico para automação de tarefas de segurança, análise de exposição e avaliação defensiva de IP suspeito.</p>
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Dashboard</span>
+            <span class="tag">SOC</span>
+        </div>
+    </aside>
+
+    <main>
+        <section class="hero">
+            <div>
+                <h2>Painel de Segurança</h2>
+                <p>Execute análise de host e avalie comportamento suspeito de IPs em ambiente defensivo.</p>
+            </div>
+            <div class="status-online">● Sistema local ativo</div>
+        </section>
+
+        <section class="grid">
+            <div class="card">
+                <h3>Análise de Host / Portas</h3>
+                <form method="POST">
+                    <input type="hidden" name="tipo_analise" value="host">
+                    <label for="host">IP ou domínio</label>
+                    <input type="text" id="host" name="host" placeholder="Exemplo: 192.168.0.1 ou google.com" required>
+                    <button type="submit">Executar análise de host</button>
+                </form>
+
+                <div class="info-list">
+                    <div class="info-item">🔎 Testa conectividade usando ping.</div>
+                    <div class="info-item">🌐 Verifica portas comuns como SSH, HTTP, HTTPS, SMB e RDP.</div>
+                    <div class="info-item">📄 Gera relatorio_seguranca.txt automaticamente.</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Análise de IP Suspeito</h3>
+                <form method="POST">
+                    <input type="hidden" name="tipo_analise" value="ip_suspeito">
+
+                    <label for="ip_suspeito">IP observado</label>
+                    <input type="text" id="ip_suspeito" name="ip_suspeito" placeholder="Exemplo: 203.0.113.10" required>
+
+                    <label for="tentativas">Número de tentativas/conexões</label>
+                    <input type="number" id="tentativas" name="tentativas" value="0" min="0" required>
+
+                    <label for="portas_distintas">Quantidade de portas distintas acessadas</label>
+                    <input type="number" id="portas_distintas" name="portas_distintas" value="0" min="0" required>
+
+                    <label for="falhas_login">Falhas de login observadas</label>
+                    <input type="number" id="falhas_login" name="falhas_login" value="0" min="0" required>
+
+                    <label for="periodo_minutos">Período analisado em minutos</label>
+                    <input type="number" id="periodo_minutos" name="periodo_minutos" value="10" min="1" required>
+
+                    <button type="submit">Avaliar IP suspeito</button>
+                </form>
+
+                <div class="info-list">
+                    <div class="info-item">⚠️ Classifica comportamento como normal, suspeito ou potencialmente hostil.</div>
+                    <div class="info-item">🧠 Usa pontuação baseada em volume, portas e falhas de login.</div>
+                    <div class="info-item">📄 Gera relatorio_ip_suspeito.txt automaticamente.</div>
+                </div>
+            </div>
+        </section>
+
+        {% if resultado_host %}
+        <section class="card" style="margin-top: 22px;">
+            <h3>Resultado da Análise de Host</h3>
+
+            <div class="metric-grid">
+                <div class="metric"><small>Portas analisadas</small><strong>{{ resultado_host.total_portas }}</strong></div>
+                <div class="metric"><small>Portas abertas</small><strong>{{ resultado_host.abertas }}</strong></div>
+                <div class="metric"><small>Portas fechadas</small><strong>{{ resultado_host.fechadas }}</strong></div>
+            </div>
+
+            <p><strong>Host analisado:</strong> {{ resultado_host.host }}</p>
+            <p><strong>Data/Hora:</strong> {{ resultado_host.data_hora }}</p>
+
+            <p>
+                <strong>Conectividade:</strong>
+                {% if resultado_host.conectividade == "ATIVO" %}
+                    <span class="badge ativo">● ATIVO</span>
+                {% else %}
+                    <span class="badge inativo">● INATIVO</span>
+                {% endif %}
+            </p>
+
+            <h3 style="margin-top: 24px;">Portas abertas</h3>
+            {% if resultado_host.portas_abertas %}
+                <table>
+                    <thead><tr><th>Porta</th><th>Serviço</th><th>Status</th></tr></thead>
+                    <tbody>
+                        {% for item in resultado_host.portas_abertas %}
+                        <tr><td>{{ item.porta }}</td><td>{{ item.servico }}</td><td><span class="badge medio">Aberta</span></td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <div class="empty">Nenhuma porta comum aberta encontrada.</div>
+            {% endif %}
+
+            <h3 style="margin-top: 24px;">Classificação</h3>
+            {% if resultado_host.classificacao == "BAIXO INDÍCIO DE EXPOSIÇÃO" %}
+                <span class="badge baixo">🟢 {{ resultado_host.classificacao }}</span>
+            {% elif resultado_host.classificacao == "ATENÇÃO RECOMENDADA" %}
+                <span class="badge medio">🟡 {{ resultado_host.classificacao }}</span>
+            {% else %}
+                <span class="badge alto">🔴 {{ resultado_host.classificacao }}</span>
+            {% endif %}
+
+            <h3 style="margin-top: 24px;">Recomendação</h3>
+            <div class="recommendation">{{ resultado_host.recomendacao }}</div>
+        </section>
+        {% endif %}
+
+        {% if resultado_ip %}
+        <section class="card" style="margin-top: 22px;">
+            <h3>Resultado da Análise de IP Suspeito</h3>
+
+            <div class="metric-grid">
+                <div class="metric"><small>Tentativas</small><strong>{{ resultado_ip.tentativas }}</strong></div>
+                <div class="metric"><small>Portas distintas</small><strong>{{ resultado_ip.portas_distintas }}</strong></div>
+                <div class="metric"><small>Falhas de login</small><strong>{{ resultado_ip.falhas_login }}</strong></div>
+            </div>
+
+            <p><strong>IP analisado:</strong> {{ resultado_ip.ip }}</p>
+            <p><strong>Período:</strong> {{ resultado_ip.periodo_minutos }} minutos</p>
+            <p><strong>Pontuação:</strong> {{ resultado_ip.pontuacao }}</p>
+
+            <h3 style="margin-top: 24px;">Classificação</h3>
+            {% if resultado_ip.nivel == "BAIXO" %}
+                <span class="badge baixo">🟢 {{ resultado_ip.classificacao }} - Risco {{ resultado_ip.nivel }}</span>
+            {% elif resultado_ip.nivel == "MÉDIO" %}
+                <span class="badge medio">🟡 {{ resultado_ip.classificacao }} - Risco {{ resultado_ip.nivel }}</span>
+            {% else %}
+                <span class="badge alto">🔴 {{ resultado_ip.classificacao }} - Risco {{ resultado_ip.nivel }}</span>
+            {% endif %}
+
+            <h3 style="margin-top: 24px;">Evidências</h3>
+            <div class="info-list">
+                {% for evidencia in resultado_ip.evidencias %}
+                    <div class="info-item">• {{ evidencia }}</div>
+                {% endfor %}
+            </div>
+
+            <h3 style="margin-top: 24px;">Recomendação</h3>
+            <div class="recommendation">{{ resultado_ip.recomendacao }}</div>
+        </section>
+        {% endif %}
+
+        <footer>Net Guardian — Projeto acadêmico de Automação de Tarefas de Segurança Cibernética</footer>
+    </main>
+</div>
+</body>
+</html>

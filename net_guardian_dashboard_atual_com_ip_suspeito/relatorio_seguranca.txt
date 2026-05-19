@@ -1,0 +1,277 @@
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 13/05/2026 17:32:36
+Host analisado: BMC.MANAUS
+Conectividade: ATIVO
+
+Portas abertas encontradas:
+- Porta 53 (DNS) aberta
+- Porta 3389 (RDP) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 13/05/2026 17:34:15
+Host analisado: 192.168.0.1
+Conectividade: INATIVO
+
+Portas abertas encontradas:
+- Porta 53 (DNS) aberta
+- Porta 80 (HTTP) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 17/05/2026 11:09:50
+Host analisado: BMC.MANAUS
+Conectividade: INATIVO
+
+Portas abertas encontradas:
+- Nenhuma porta comum aberta encontrada
+
+Classificação: BAIXO INDÍCIO DE EXPOSIÇÃO
+Recomendação: Nenhuma porta comum foi identificada como aberta. Manter monitoramento periódico.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 17/05/2026 11:10:30
+Host analisado: amazon.com
+Conectividade: INATIVO
+
+Portas abertas encontradas:
+- Porta 80 (HTTP) aberta
+- Porta 443 (HTTPS) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 17/05/2026 11:10:32
+Host analisado: amazon
+Conectividade: INATIVO
+
+Portas abertas encontradas:
+- Nenhuma porta comum aberta encontrada
+
+Classificação: BAIXO INDÍCIO DE EXPOSIÇÃO
+Recomendação: Nenhuma porta comum foi identificada como aberta. Manter monitoramento periódico.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 17/05/2026 11:10:36
+Host analisado: amazon
+Conectividade: INATIVO
+
+Portas abertas encontradas:
+- Nenhuma porta comum aberta encontrada
+
+Classificação: BAIXO INDÍCIO DE EXPOSIÇÃO
+Recomendação: Nenhuma porta comum foi identificada como aberta. Manter monitoramento periódico.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 17/05/2026 11:10:52
+Host analisado: amazon.com
+Conectividade: INATIVO
+
+Portas abertas encontradas:
+- Porta 80 (HTTP) aberta
+- Porta 443 (HTTPS) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 17/05/2026 11:11:09
+Host analisado: google.com
+Conectividade: ATIVO
+
+Portas abertas encontradas:
+- Porta 80 (HTTP) aberta
+- Porta 443 (HTTPS) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 17/05/2026 11:13:00
+Host analisado: 8.8.8.8
+Conectividade: ATIVO
+
+Portas abertas encontradas:
+- Porta 53 (DNS) aberta
+- Porta 443 (HTTPS) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 17/05/2026 11:13:38
+Host analisado: 10.150.10.250
+Conectividade: INATIVO
+
+Portas abertas encontradas:
+- Nenhuma porta comum aberta encontrada
+
+Classificação: BAIXO INDÍCIO DE EXPOSIÇÃO
+Recomendação: Nenhuma porta comum foi identificada como aberta. Manter monitoramento periódico.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 17/05/2026 11:27:45
+Host analisado: google.com
+Conectividade: ATIVO
+
+Portas abertas encontradas:
+- Porta 80 (HTTP) aberta
+- Porta 443 (HTTPS) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 17/05/2026 11:37:01
+Host analisado: google.com
+Conectividade: ATIVO
+
+Portas abertas encontradas:
+- Porta 80 (HTTP) aberta
+- Porta 443 (HTTPS) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 18/05/2026 10:16:37
+Host analisado: BMC.MANAUS
+Conectividade: ATIVO
+
+Portas abertas encontradas:
+- Porta 445 (SMB) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 18/05/2026 10:23:17
+Host analisado: BMC.MANAUS
+Conectividade: ATIVO
+
+Portas abertas encontradas:
+- Porta 445 (SMB) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 18/05/2026 10:24:31
+Host analisado: google.com
+Conectividade: ATIVO
+
+Portas abertas encontradas:
+- Porta 53 (DNS) aberta
+- Porta 80 (HTTP) aberta
+- Porta 443 (HTTPS) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 18/05/2026 11:56:04
+Host analisado: BMC.MANAUS
+Conectividade: ATIVO
+
+Portas abertas encontradas:
+- Porta 53 (DNS) aberta
+- Porta 445 (SMB) aberta
+- Porta 3389 (RDP) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 18/05/2026 11:57:46
+Host analisado: BMC.MANAUS
+Conectividade: ATIVO
+
+Portas abertas encontradas:
+- Porta 53 (DNS) aberta
+- Porta 445 (SMB) aberta
+- Porta 3389 (RDP) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 18/05/2026 19:20:48
+Host analisado: 192.168.144.1
+Conectividade: ATIVO
+
+Portas abertas encontradas:
+- Porta 445 (SMB) aberta
+- Porta 3389 (RDP) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 18/05/2026 19:25:52
+Host analisado: 192.168.144.1
+Conectividade: ATIVO
+
+Portas abertas encontradas:
+- Porta 445 (SMB) aberta
+- Porta 3389 (RDP) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.
+
+============================================================
+RELATÓRIO DE AUTOMAÇÃO DE SEGURANÇA - NET GUARDIAN
+============================================================
+Data/Hora: 18/05/2026 20:09:48
+Host analisado: 8.8.8.8
+Conectividade: ATIVO
+
+Portas abertas encontradas:
+- Porta 53 (DNS) aberta
+- Porta 443 (HTTPS) aberta
+
+Classificação: ATENÇÃO RECOMENDADA
+Recomendação: Verificar se os serviços expostos são realmente necessários e se estão atualizados.

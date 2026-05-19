@@ -1,0 +1,127 @@
+
+============================================================
+RELATÓRIO DE ANÁLISE DE IP SUSPEITO - NET GUARDIAN
+============================================================
+Data/Hora: 18/05/2026 10:25:06
+IP analisado: 10.150.10.250
+Tentativas: 0
+Portas distintas: 0
+Falhas de login: 0
+Período analisado: 10 minutos
+Pontuação: 0
+Classificação: NORMAL
+Nível de risco: BAIXO
+
+Evidências:
+- Nenhuma evidência crítica informada
+
+Recomendação: Manter monitoramento periódico. Nenhum forte indício de comportamento hostil foi identificado.
+
+============================================================
+RELATÓRIO DE ANÁLISE DE IP SUSPEITO - NET GUARDIAN
+============================================================
+Data/Hora: 18/05/2026 10:25:58
+IP analisado: 10.150.10.1
+Tentativas: 0
+Portas distintas: 0
+Falhas de login: 0
+Período analisado: 10 minutos
+Pontuação: 0
+Classificação: NORMAL
+Nível de risco: BAIXO
+
+Evidências:
+- Nenhuma evidência crítica informada
+
+Recomendação: Manter monitoramento periódico. Nenhum forte indício de comportamento hostil foi identificado.
+
+============================================================
+RELATÓRIO DE ANÁLISE DE IP SUSPEITO - NET GUARDIAN
+============================================================
+Data/Hora: 18/05/2026 11:57:04
+IP analisado: 10.150.10.11
+Tentativas: 0
+Portas distintas: 0
+Falhas de login: 0
+Período analisado: 10 minutos
+Pontuação: 0
+Classificação: NORMAL
+Nível de risco: BAIXO
+
+Evidências:
+- Nenhuma evidência crítica informada
+
+Recomendação: Manter monitoramento periódico. Nenhum forte indício de comportamento hostil foi identificado.
+
+============================================================
+RELATÓRIO DE ANÁLISE DE IP SUSPEITO - NET GUARDIAN
+============================================================
+Data/Hora: 18/05/2026 11:59:13
+IP analisado: BMC.MANAUS
+Tentativas: 0
+Portas distintas: 0
+Falhas de login: 0
+Período analisado: 10 minutos
+Pontuação: 0
+Classificação: NORMAL
+Nível de risco: BAIXO
+
+Evidências:
+- Nenhuma evidência crítica informada
+
+Recomendação: Manter monitoramento periódico. Nenhum forte indício de comportamento hostil foi identificado.
+
+============================================================
+RELATÓRIO DE ANÁLISE DE IP SUSPEITO - NET GUARDIAN
+============================================================
+Data/Hora: 18/05/2026 11:59:23
+IP analisado: 8.8.8.8
+Tentativas: 0
+Portas distintas: 0
+Falhas de login: 0
+Período analisado: 10 minutos
+Pontuação: 0
+Classificação: NORMAL
+Nível de risco: BAIXO
+
+Evidências:
+- Nenhuma evidência crítica informada
+
+Recomendação: Manter monitoramento periódico. Nenhum forte indício de comportamento hostil foi identificado.
+
+============================================================
+RELATÓRIO DE ANÁLISE DE IP SUSPEITO - NET GUARDIAN
+============================================================
+Data/Hora: 18/05/2026 12:00:07
+IP analisado: 10.150.10.250
+Tentativas: 1
+Portas distintas: 5
+Falhas de login: 5
+Período analisado: 1 minutos
+Pontuação: 4
+Classificação: SUSPEITO
+Nível de risco: MÉDIO
+
+Evidências:
+- Diversas portas acessadas
+- Algumas falhas de login identificadas
+
+Recomendação: Revisar logs, validar origem do IP e acompanhar novas tentativas.
+
+============================================================
+RELATÓRIO DE ANÁLISE DE IP SUSPEITO - NET GUARDIAN
+============================================================
+Data/Hora: 18/05/2026 19:25:34
+IP analisado: 192.168.144.1
+Tentativas: 0
+Portas distintas: 0
+Falhas de login: 0
+Período analisado: 10 minutos
+Pontuação: 0
+Classificação: NORMAL
+Nível de risco: BAIXO
+
+Evidências:
+- Nenhuma evidência crítica informada
+
+Recomendação: Manter monitoramento periódico. Nenhum forte indício de comportamento hostil foi identificado.
